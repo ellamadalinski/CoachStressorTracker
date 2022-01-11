@@ -14,6 +14,7 @@
 		B614B9AA278C798A005311EF /* CoachStressorTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B614B9A8278C798A005311EF /* CoachStressorTracker.xcdatamodeld */; };
 		B614B9AC278C798C005311EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B614B9AB278C798C005311EF /* Assets.xcassets */; };
 		B614B9AF278C798C005311EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B614B9AD278C798C005311EF /* LaunchScreen.storyboard */; };
+		B6D525A3278DBC69003E1619 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D525A2278DBC69003E1619 /* SurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B614B9AB278C798C005311EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B614B9AE278C798C005311EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B614B9B0278C798C005311EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6D525A2278DBC69003E1619 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				B614B9A1278C798A005311EF /* SceneDelegate.swift */,
 				B614B9A3278C798A005311EF /* ViewController.swift */,
 				B614B9A5278C798A005311EF /* Main.storyboard */,
+				B6D525A2278DBC69003E1619 /* SurveyViewController.swift */,
 				B614B9AB278C798C005311EF /* Assets.xcassets */,
 				B614B9AD278C798C005311EF /* LaunchScreen.storyboard */,
 				B614B9B0278C798C005311EF /* Info.plist */,
@@ -145,6 +148,7 @@
 				B614B9A4278C798A005311EF /* ViewController.swift in Sources */,
 				B614B9A0278C798A005311EF /* AppDelegate.swift in Sources */,
 				B614B9A2278C798A005311EF /* SceneDelegate.swift in Sources */,
+				B6D525A3278DBC69003E1619 /* SurveyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
