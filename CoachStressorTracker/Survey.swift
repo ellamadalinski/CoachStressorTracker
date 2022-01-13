@@ -8,10 +8,12 @@
 import Foundation
 class Survey{
     var name: String
+    var type: String
     var date : Date
     
-    init(n: String, d: Date){
+    init(n: String, t: String, d: Date){
         name = n
+        type = t
         date = d
     }
     

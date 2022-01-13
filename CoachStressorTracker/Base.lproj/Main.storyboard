@@ -87,31 +87,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-lt-WLO">
-                                <rect key="frame" x="37" y="196" width="50" height="21"/>
+                                <rect key="frame" x="17" y="247" width="62" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xu3-Bm-kMr">
-                                <rect key="frame" x="95" y="189" width="120" height="34"/>
+                                <rect key="frame" x="87" y="243" width="158" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Nl-mB-Fvs">
-                                <rect key="frame" x="37" y="258" width="317" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Practice"/>
-                                    <segment title="Game/Meet/Competition"/>
-                                </segments>
-                            </segmentedControl>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="8bn-6B-I4Q">
-                                <rect key="frame" x="-253" y="337" width="392" height="170"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="8bn-6B-I4Q">
+                                <rect key="frame" x="16" y="499" width="359" height="196"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <locale key="locale" localeIdentifier="en_US"/>
                             </datePicker>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Nl-mB-Fvs">
+                                <rect key="frame" x="17" y="380" width="358" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Practice"/>
+                                    <segment title="Game/Meet"/>
+                                    <segment title="Team Bonding"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RtS-1Y-HNR"/>
                         <color key="backgroundColor" red="0.87125789432458867" green="0.99480741908047421" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -149,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="3311" y="75"/>
         </scene>
-        <!--Survey View Controller-->
+        <!--Before View Controller-->
         <scene sceneID="eiS-iu-F42">
             <objects>
-                <viewController id="aUu-8H-A72" customClass="SurveyViewController" customModule="CoachStressorTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aUu-8H-A72" customClass="BeforeViewController" customModule="CoachStressorTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CXM-Hu-nNh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="3167.6923076923076" y="762.08530805687201"/>
         </scene>
-        <!--View Controller-->
+        <!--After View Controller-->
         <scene sceneID="bkn-0u-iif">
             <objects>
-                <viewController id="Pcg-GM-ZwU" sceneMemberID="viewController">
+                <viewController id="Pcg-GM-ZwU" customClass="AfterViewController" customModule="CoachStressorTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VoH-NW-kn7">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,10 +238,10 @@
             </objects>
             <point key="canvasLocation" x="3856.9230769230767" y="762.08530805687201"/>
         </scene>
-        <!--View Controller-->
+        <!--Stressor View Controller-->
         <scene sceneID="E3v-Lq-7iW">
             <objects>
-                <viewController id="hmY-Tc-5jo" sceneMemberID="viewController">
+                <viewController id="hmY-Tc-5jo" customClass="StressorViewController" customModule="CoachStressorTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XEz-Tt-TKP">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,6 +253,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Given your responses from the previous questions, list your possible stressors of the --:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I9P-dI-g9X">
+                                <rect key="frame" x="16" y="178" width="358" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.5711195469" green="0.73980814220000002" blue="0.98042386770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stressor #4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ho-Y6-LEl">
+                                <rect key="frame" x="16" y="573" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stressor #3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jeH-Dn-ou0">
+                                <rect key="frame" x="16" y="472" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stressor #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ysa-7j-jgz">
+                                <rect key="frame" x="16" y="379" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stressor #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iUL-YZ-7fM">
+                                <rect key="frame" x="16" y="292" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stressor #5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s8N-My-5sf">
+                                <rect key="frame" x="16" y="670" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="013-DB-sIs"/>
                         <color key="backgroundColor" red="0.57181612766487677" green="0.73824380222006636" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -276,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTC-Lf-kbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4578" y="761"/>
+            <point key="canvasLocation" x="4576.9230769230771" y="760.66350710900474"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bpG-Rt-pKL">
@@ -297,11 +336,11 @@
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="63.616071428571423"/>
         </scene>
-        <!--Item-->
+        <!--Survey-->
         <scene sceneID="14e-gB-gVa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="raT-ob-1mc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ega-0N-0bw"/>
+                    <tabBarItem key="tabBarItem" title="Survey" image="questionmark.app.fill" catalog="system" selectedImage="questionmark.app.fill" id="ega-0N-0bw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HgZ-8g-cJ5">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -319,6 +358,10 @@
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="questionmark.app.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
