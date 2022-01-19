@@ -8,22 +8,27 @@
 import UIKit
 
 class BeforeViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var moodNumberLabel: UILabel!
+    @IBOutlet weak var slider: UISlider!
+    
+    var mood = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        mood = Int(slider.value)
+        moodNumberLabel.text = "\(mood)"
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        mood = Int(slider.value)
+        moodNumberLabel.text = "\(mood)"
     }
-    */
+    
 
 }
