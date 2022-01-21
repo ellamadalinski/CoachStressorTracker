@@ -6,7 +6,14 @@
 //
 
 import Foundation
-class Survey{
+
+public class Statics: Codable {
+    public static var surveyArray = [Survey]()
+    public static var stressorArray = [String]()
+    
+}
+
+public class Survey: Codable{
     var name: String
     var type: String
     var date : Date

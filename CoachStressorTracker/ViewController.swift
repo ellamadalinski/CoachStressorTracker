@@ -46,10 +46,6 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             //populate the cell here
             return cell
         }
-        else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myDefaultCell", for: indexPath)
-            return cell
-        }
     }
     
     
@@ -58,11 +54,35 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         //view the survey (NOT for stressors)
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+        
+        if tableView == pastStressorsTableViewOutlet{
+            if editingStyle == .delete {
+                Statics.stressorArray.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.reloadData()
+            }
+        }
+        else if tableView == pastSurveysTableViewOutlet{
+            if editingStyle == { //edit
+                
+            }
+            
+            if editingStyle == .delete {
+                Statics.surveyArray.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.reloadData()
+            }
             
         }
+        
+        
+                                              
+        
     }
     
 
