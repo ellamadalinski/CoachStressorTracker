@@ -23,10 +23,10 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == pastStressorsTableViewOutlet{
-            return 0
+            return 1 //stressorArray.count
         }
         else if tableView == pastSurveysTableViewOutlet{
-            return 0
+            return 1 //surveyArray.count
         }
         else{
             return  0
@@ -41,9 +41,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             //populate the cell here
             return cell
         }
-        else if tableView == pastSurveysTableViewOutlet{
+        else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "mySurveyCell", for: indexPath)
-            //populate the cell here
+            cell.detailTextLabel!.text = "Hi"
             return cell
         }
     }
@@ -58,33 +58,56 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        
+//        if tableView == pastStressorsTableViewOutlet{
+//            if editingStyle == .delete {
+//                Statics.stressorArray.remove(at: indexPath.row)
+//                tableView.deleteRows(at: [indexPath], with: .fade)
+//                tableView.reloadData()
+//            }
+//        }
+//        else if tableView == pastSurveysTableViewOutlet{
+//
+//            if editingStyle == .delete {
+//                Statics.surveyArray.remove(at: indexPath.row)
+//                tableView.deleteRows(at: [indexPath], with: .fade)
+//                tableView.reloadData()
+//            }
+//
+//        }
+//
+//
+//    }
+    
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
-        if tableView == pastStressorsTableViewOutlet{
-            if editingStyle == .delete {
-                Statics.stressorArray.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
-                tableView.reloadData()
+        if tableView == pastSurveysTableViewOutlet{
+            let edit = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
+                
             }
-        }
-        else if tableView == pastSurveysTableViewOutlet{
-            if editingStyle == { //edit
+            let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
                 
             }
             
-            if editingStyle == .delete {
-                Statics.surveyArray.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
-                tableView.reloadData()
-            }
-            
+            return [delete, edit]
+                
         }
         
+        else{
+            let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+                
+            }
+            
+            
+            return [delete]
+        }
+            
         
-                                              
+        
         
     }
-    
 
 }
 

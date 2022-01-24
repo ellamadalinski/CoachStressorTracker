@@ -17,11 +17,15 @@ public class Survey: Codable{
     var name: String
     var type: String
     var date : Date
+    var beforeMood : Int
+    var afterMood : Int
     
-    init(n: String, t: String, d: Date){
+    init(n: String, t: String, d: Date, bm: Int, am: Int){
         name = n
         type = t
         date = d
+        beforeMood = bm
+        afterMood = am
     }
     
 }
