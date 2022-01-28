@@ -257,7 +257,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Next"/>
                                 <connections>
-                                    <segue destination="Pcg-GM-ZwU" kind="show" id="ZUi-uB-qQ9"/>
+                                    <segue destination="W54-WA-XJr" kind="show" id="psQ-xk-Jq2"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -272,20 +272,49 @@
             </objects>
             <point key="canvasLocation" x="3167.6923076923076" y="762.08530805687201"/>
         </scene>
-        <!--View Controller-->
+        <!--End View Controller-->
         <scene sceneID="Lk3-0k-QsF">
             <objects>
-                <viewController id="0Cj-bd-H09" sceneMemberID="viewController">
+                <viewController id="0Cj-bd-H09" customClass="EndViewController" customModule="CoachStressorTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="66s-xZ-pO7">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End of Practice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvX-ew-UJI">
+                                <rect key="frame" x="98" y="95" width="195" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Rate your mood (1-Bad, 10-Excellent):" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YEg-IV-Vvs">
+                                <rect key="frame" x="16" y="168" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wOE-hZ-5I2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rN3-zl-YoM">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="4WC-xu-HCv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="8Cl-Tj-d87">
+                                <rect key="frame" x="306" y="5" width="68" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Next"/>
+                                <connections>
+                                    <segue destination="Pcg-GM-ZwU" kind="show" id="bEN-Io-vMA"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azh-Ez-i89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5223" y="1666"/>
+            <point key="canvasLocation" x="5312" y="761"/>
         </scene>
         <!--After View Controller-->
         <scene sceneID="bkn-0u-iif">
@@ -389,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDu-Sp-ZjJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3848" y="761"/>
+            <point key="canvasLocation" x="6042" y="762"/>
         </scene>
         <!--Stressor View Controller-->
         <scene sceneID="E3v-Lq-7iW">
@@ -499,7 +528,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTC-Lf-kbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4531" y="761"/>
+            <point key="canvasLocation" x="6748" y="762"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bpG-Rt-pKL">
@@ -539,35 +568,93 @@
             </objects>
             <point key="canvasLocation" x="1553.8461538461538" y="760.66350710900474"/>
         </scene>
-        <!--View Controller-->
+        <!--Beginning View Controller-->
         <scene sceneID="xsk-eL-mDm">
             <objects>
-                <viewController id="W54-WA-XJr" sceneMemberID="viewController">
+                <viewController id="W54-WA-XJr" customClass="BeginningViewController" customModule="CoachStressorTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SlE-Mi-9j8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beginning of Practice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqm-yQ-6ad">
+                                <rect key="frame" x="58" y="96" width="274" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Rate your mood (1-Bad, 10-Excellent):" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kWF-Bi-JL3">
+                                <rect key="frame" x="0.0" y="175" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mJ9-an-oy4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CSV-Hz-X75">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="hMd-cf-zWf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="JUM-bx-DZ0">
+                                <rect key="frame" x="306" y="5" width="68" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Next"/>
+                                <connections>
+                                    <segue destination="RiJ-Cc-dLO" kind="show" id="8J7-LF-DIW"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYg-WQ-Uvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3848" y="1667"/>
+            <point key="canvasLocation" x="3891" y="762"/>
         </scene>
-        <!--View Controller-->
+        <!--Middle View Controller-->
         <scene sceneID="Nvp-jX-deD">
             <objects>
-                <viewController id="RiJ-Cc-dLO" sceneMemberID="viewController">
+                <viewController id="RiJ-Cc-dLO" customClass="MiddleViewController" customModule="CoachStressorTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsV-ph-YuO">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Middle of Practice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFX-qq-XWU">
+                                <rect key="frame" x="79" y="101" width="233" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Rate your mood (1-Bad, 10-Excellent):" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="edU-iM-V2R">
+                                <rect key="frame" x="45" y="172" width="329" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0du-Eb-Jdr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="v3b-0F-Zi1">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="BzJ-we-LLP">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="2Ng-Ul-35d">
+                                <rect key="frame" x="306" y="5" width="68" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Next"/>
+                                <connections>
+                                    <segue destination="0Cj-bd-H09" kind="show" id="oKl-wM-0ev"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yvu-sY-KlO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4531" y="1666"/>
+            <point key="canvasLocation" x="4605" y="761"/>
         </scene>
     </scenes>
     <resources>
