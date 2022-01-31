@@ -9,6 +9,7 @@ import UIKit
 
 class BeforeViewController: UIViewController {
     
+    //self.navigationController?.navigationBar
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var moodNumberLabel: UILabel!
