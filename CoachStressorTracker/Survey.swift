@@ -19,6 +19,15 @@ public class Survey: Codable{
     var beforeMood : Int
     var expect: String
     var goal : String
+    var beginningMood : Int
+    var beginningStressor : String
+    var beginningGoal : String
+    var middleMood : Int
+    var middleStressor : String
+    var middleGoal :  String
+    var endMood : Int
+    var endStressor : String
+    var endGoal : String
     var afterMood : Int
     var overall: String
     var happy: String
@@ -31,12 +40,21 @@ public class Survey: Codable{
     var mostStressed: String
     var alleviate: String
     
-    init(n: String, d: Date, bm: Int, e: String, g: String, am: Int, o: String, h: String, u: String, s1: String, s2: String, s3: String, s4: String, s5: String, ms: String, a: String){
+    init(n: String, d: Date, bm: Int, e: String, g: String, begm: Int, begs: String, begg: String, midm: Int, mids: String, midg: String, endm: Int, ends: String, endg: String, am: Int, o: String, h: String, u: String, s1: String, s2: String, s3: String, s4: String, s5: String, ms: String, a: String){
         name = n
         date = d
         beforeMood = bm
         expect = e
         goal = g
+        beginningMood = begm
+        beginningStressor = begs
+        beginningGoal = begg
+        middleMood = midm
+        middleStressor = mids
+        middleGoal = midg
+        endMood = endm
+        endStressor = ends
+        endGoal = endg
         afterMood = am
         overall = o
         happy = h
@@ -57,6 +75,15 @@ public class Survey: Codable{
         static var beforeMood : Int = 0
         static var expect: String = ""
         static var goal : String = ""
+        static var beginningMood : Int = 0
+        static var beginningStressor : String = ""
+        static var beginningGoal : String = ""
+        static var middleMood : Int = 0
+        static var middleStressor : String = ""
+        static var middleGoal : String = ""
+        static var endMood : Int = 0
+        static var endStressor : String = ""
+        static var endGoal : String = ""
         static var afterMood : Int = 0
         static var overall: String = ""
         static var happy: String = ""

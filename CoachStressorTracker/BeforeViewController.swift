@@ -20,6 +20,9 @@ class BeforeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        
         mood = Int(slider.value)
         moodNumberLabel.text = "\(mood)"
         
