@@ -29,9 +29,8 @@ class BeginningViewController: UIViewController {
         
     }
     
-    @IBAction func unwind(_ seg : UIStoryboardSegue){
-        
-        performSegue(withIdentifier: "doneSegue", sender: nil)
-    }
+//    @IBAction func unwind(_ seg : UIStoryboardSegue){
+//        performSegue(withIdentifier: "doneSegue1", sender: nil)
+//    }
 
 }
