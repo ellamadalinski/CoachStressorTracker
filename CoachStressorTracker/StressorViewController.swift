@@ -15,9 +15,8 @@ class StressorViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func doneButtonAction(_ sender: Any) {
-        
+    @IBAction func doneButtonAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "doneSegue", sender: nil)
     }
     
     

@@ -9,9 +9,7 @@ import UIKit
 
 class BeforeViewController: UIViewController {
     
-    //self.navigationController?.navigationBar
-    
-    @IBOutlet weak var titleLabel: UILabel!
+
     @IBOutlet weak var moodNumberLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     
@@ -33,6 +31,12 @@ class BeforeViewController: UIViewController {
         mood = Int(slider.value)
         moodNumberLabel.text = "\(mood)"
     }
+    
+    @IBAction func unwind(_ seg : UIStoryboardSegue){
+        moodNumberLabel.text = "Hi"
+        performSegue(withIdentifier: "doneSegue", sender: nil)
+    }
+    
     
 
 }

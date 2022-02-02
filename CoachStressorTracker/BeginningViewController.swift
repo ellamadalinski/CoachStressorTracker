@@ -9,21 +9,29 @@ import UIKit
 
 class BeginningViewController: UIViewController {
 
+    
+    @IBOutlet weak var moodNumberLabelOutlet: UILabel!
+    @IBOutlet weak var sliderOutlet: UISlider!
+    
+    var mood = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        mood = Int(slider.value)
+//        moodNumberLabel.text = "\(mood)"
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func moodNumberChangedAction(_ sender: UISlider) {
+        
     }
-    */
+    
+    @IBAction func unwind(_ seg : UIStoryboardSegue){
+        
+        performSegue(withIdentifier: "doneSegue", sender: nil)
+    }
 
 }

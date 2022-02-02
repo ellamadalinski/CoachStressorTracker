@@ -155,11 +155,16 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Next"/>
                                 <connections>
+                                    <action selector="nextButtonAction:" destination="kV8-ZE-Eh9" eventType="touchUpInside" id="If3-Fk-D3J"/>
                                     <segue destination="aUu-8H-A72" kind="show" id="Y7k-na-euC"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePickerOutlet" destination="8bn-6B-I4Q" id="l1V-A4-2OX"/>
+                        <outlet property="nameOutlet" destination="Xu3-Bm-kMr" id="1No-01-Ht1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qst-jR-TBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,10 +275,11 @@
                     <connections>
                         <outlet property="moodNumberLabel" destination="PRG-p4-To9" id="c1u-zt-W2d"/>
                         <outlet property="slider" destination="Ck7-0r-tFY" id="dXr-Bm-vZ5"/>
-                        <outlet property="titleLabel" destination="Ktg-Ve-DZC" id="dqt-GA-MaQ"/>
+                        <segue destination="Z0Q-Kt-mON" kind="unwind" identifier="doneSegue" unwindAction="unwind:" id="RDL-KJ-DTc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWY-pI-nAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Z0Q-Kt-mON" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3167.6923076923076" y="762.08530805687201"/>
         </scene>
@@ -585,13 +591,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Done"/>
                                 <connections>
-                                    <action selector="doneButtonAction:" destination="hmY-Tc-5jo" eventType="touchUpInside" id="mS4-dD-sHc"/>
+                                    <action selector="doneButtonAction:" destination="hmY-Tc-5jo" eventType="touchUpInside" id="F9L-XE-Vdn"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="5At-Cb-yLJ" kind="unwind" identifier="doneSegue" unwindAction="unwind:" id="rQQ-38-sBE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTC-Lf-kbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="5At-Cb-yLJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6747.6923076923076" y="761.37440758293837"/>
         </scene>
@@ -667,6 +677,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <imageReference key="minimumValueImage" image="1.square.fill" catalog="system" symbolScale="large"/>
                                 <imageReference key="maximumValueImage" image="10.square.fill" catalog="system" symbolScale="large"/>
+                                <connections>
+                                    <action selector="moodNumberChangedAction:" destination="W54-WA-XJr" eventType="valueChanged" id="Mrx-zE-45k"/>
+                                </connections>
                             </slider>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What has been your greatest stressor in this portion of practice?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U87-tx-pDQ">
                                 <rect key="frame" x="16" y="370" width="358" height="56"/>
@@ -724,8 +737,14 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="moodNumberLabelOutlet" destination="FPM-F2-CxF" id="JmD-Z2-D1A"/>
+                        <outlet property="sliderOutlet" destination="hbK-Eu-vGg" id="kQN-NZ-m5W"/>
+                        <segue destination="YkF-84-3JK" kind="unwind" identifier="doneSegue" unwindAction="unwind:" id="s4O-Ua-6AB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYg-WQ-Uvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="YkF-84-3JK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3890.7692307692305" y="761.37440758293837"/>
         </scene>
