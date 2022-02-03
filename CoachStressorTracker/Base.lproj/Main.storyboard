@@ -155,7 +155,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Next"/>
                                 <connections>
-                                    <action selector="nextButtonAction:" destination="kV8-ZE-Eh9" eventType="touchUpInside" id="If3-Fk-D3J"/>
                                     <segue destination="aUu-8H-A72" kind="show" id="Y7k-na-euC"/>
                                 </connections>
                             </button>
@@ -275,11 +274,9 @@
                     <connections>
                         <outlet property="moodNumberLabel" destination="PRG-p4-To9" id="c1u-zt-W2d"/>
                         <outlet property="slider" destination="Ck7-0r-tFY" id="dXr-Bm-vZ5"/>
-                        <segue destination="Z0Q-Kt-mON" kind="unwind" identifier="doneSegue" unwindAction="unwind:" id="sZ7-IP-LQ8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWY-pI-nAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Z0Q-Kt-mON" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3167.6923076923076" y="762.08530805687201"/>
         </scene>
@@ -597,7 +594,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="5At-Cb-yLJ" kind="unwind" identifier="doneSegue" unwindAction="unwind:" id="rQQ-38-sBE"/>
+                        <segue destination="5At-Cb-yLJ" kind="unwind" identifier="doneSegue1" unwindAction="unwind:" id="gwg-py-59H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTC-Lf-kbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

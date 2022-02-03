@@ -32,11 +32,10 @@ class BeforeViewController: UIViewController {
         moodNumberLabel.text = "\(mood)"
     }
     
-    @IBAction func unwind(_ seg : UIStoryboardSegue){
-        moodNumberLabel.text = "Hi"
-        performSegue(withIdentifier: "doneSegue", sender: nil)
-    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        print("disappearingFrom2nd")
+    }
     
 
 }

@@ -16,9 +16,11 @@ class StressorViewController: UIViewController {
     }
     
     @IBAction func doneButtonAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "doneSegue", sender: nil)
+        performSegue(withIdentifier: "doneSegue1", sender: self)
     }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("disappearingFrom7th")
+    }
 
 }

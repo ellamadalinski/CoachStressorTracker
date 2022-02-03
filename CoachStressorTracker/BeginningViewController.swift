@@ -29,8 +29,7 @@ class BeginningViewController: UIViewController {
         
     }
     
-//    @IBAction func unwind(_ seg : UIStoryboardSegue){
-//        performSegue(withIdentifier: "doneSegue1", sender: nil)
-//    }
-
+    override func viewWillDisappear(_ animated: Bool) {
+        print("disappearingFrom3rd")
+    }
 }

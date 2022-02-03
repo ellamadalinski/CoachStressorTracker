@@ -16,8 +16,7 @@ class MiddleViewController: UIViewController {
     }
     
 
-//    @IBAction func unwind(_ seg : UIStoryboardSegue){
-//        performSegue(withIdentifier: "doneSegue", sender: nil)
-//    }
-
+    override func viewWillDisappear(_ animated: Bool) {
+        print("disappearingFrom4th")
+    }
 }

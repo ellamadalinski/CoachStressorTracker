@@ -20,8 +20,9 @@ class SurveyViewController: UIViewController {
     @IBAction func unwind(_ seg : UIStoryboardSegue){
         nameOutlet.text = ""
     }
-
-    @IBAction func nextButtonAction(_ sender: UIButton) {
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("disappearingFrom1st")
     }
     
     
