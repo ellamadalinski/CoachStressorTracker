@@ -19,10 +19,17 @@ class SurveyViewController: UIViewController {
     
     @IBAction func unwind(_ seg : UIStoryboardSegue){
         nameOutlet.text = ""
+        datePickerOutlet.date = Date.now
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         print("disappearingFrom1st")
+        if let name = nameOutlet.text{
+            TempVariables.name = name
+        }
+        
+        TempVariables.date = datePickerOutlet.date
+        
     }
     
     

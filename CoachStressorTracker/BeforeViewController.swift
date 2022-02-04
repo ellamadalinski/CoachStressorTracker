@@ -12,6 +12,8 @@ class BeforeViewController: UIViewController {
 
     @IBOutlet weak var moodNumberLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var expectingTextField: UITextField!
+    @IBOutlet weak var goalTextField: UITextField!
     
     var mood = 0
     
@@ -35,6 +37,17 @@ class BeforeViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         print("disappearingFrom2nd")
+        
+        TempVariables.beforeMood = mood
+        
+        if let expect = expectingTextField.text{
+            TempVariables.expect = expect
+        }
+        
+        if let goal = goalTextField.text{
+            TempVariables.goal = goal
+        }
+        
     }
     
 

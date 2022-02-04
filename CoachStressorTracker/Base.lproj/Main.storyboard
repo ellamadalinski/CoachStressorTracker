@@ -272,6 +272,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="expectingTextField" destination="pRj-tJ-AWR" id="taS-I0-ivt"/>
+                        <outlet property="goalTextField" destination="MDB-yh-liM" id="19C-Dv-55U"/>
                         <outlet property="moodNumberLabel" destination="PRG-p4-To9" id="c1u-zt-W2d"/>
                         <outlet property="slider" destination="Ck7-0r-tFY" id="dXr-Bm-vZ5"/>
                     </connections>
@@ -302,7 +304,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjE-pW-g9E">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjE-pW-g9E">
                                 <rect key="frame" x="140" y="235" width="110" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -314,6 +316,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <imageReference key="minimumValueImage" image="1.square.fill" catalog="system" symbolScale="large"/>
                                 <imageReference key="maximumValueImage" image="10.square.fill" catalog="system" symbolScale="large"/>
+                                <connections>
+                                    <action selector="moodNumberChangedAction:" destination="0Cj-bd-H09" eventType="valueChanged" id="qUc-Ql-3R3"/>
+                                </connections>
                             </slider>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What has been your greatest stressor in this portion of practice?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="emP-36-eoy">
                                 <rect key="frame" x="16" y="367" width="358" height="56"/>
@@ -371,6 +376,12 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="goalTextField" destination="hvl-JY-I0D" id="9Tb-CZ-FPd"/>
+                        <outlet property="moodNumberLabel" destination="mjE-pW-g9E" id="ZVK-r6-Lkq"/>
+                        <outlet property="slider" destination="FLM-uz-ZP4" id="Wlp-jj-NC8"/>
+                        <outlet property="stressorTextField" destination="dVe-mc-Z6D" id="zLq-0f-irf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azh-Ez-i89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -399,7 +410,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uit-yg-6hH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uit-yg-6hH">
                                 <rect key="frame" x="140" y="241" width="110" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -411,6 +422,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <imageReference key="minimumValueImage" image="1.square.fill" catalog="system" symbolScale="large"/>
                                 <imageReference key="maximumValueImage" image="10.square.fill" catalog="system" symbolScale="large"/>
+                                <connections>
+                                    <action selector="moodNumberChangedAction:" destination="Pcg-GM-ZwU" eventType="valueChanged" id="Rh6-kZ-s3m"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Overall, how did the practice go?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvB-of-YmG">
                                 <rect key="frame" x="18" y="348" width="250" height="21"/>
@@ -479,6 +493,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="happyTextField" destination="3Xm-vT-O9J" id="Zr9-Ig-zfq"/>
+                        <outlet property="moodNumberLabel" destination="uit-yg-6hH" id="Nd8-Ow-rlI"/>
+                        <outlet property="overallTextField" destination="IyI-rF-Zxr" id="6di-aq-Muu"/>
+                        <outlet property="slider" destination="f60-Wo-FPj" id="btJ-4k-N6p"/>
+                        <outlet property="upsetTextField" destination="CtI-1O-ntZ" id="Ka9-5D-elR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDu-Sp-ZjJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -594,6 +615,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="alleviateTextField" destination="ZOc-Ok-8K3" id="EY0-Xo-l5R"/>
+                        <outlet property="mostStressedTextField" destination="14L-Hz-tnD" id="dyl-Fz-b2k"/>
+                        <outlet property="stressor1TextField" destination="iUL-YZ-7fM" id="ZY5-Nf-NyC"/>
+                        <outlet property="stressor2TextField" destination="Ysa-7j-jgz" id="m7B-Qd-NEB"/>
+                        <outlet property="stressor3TextField" destination="jeH-Dn-ou0" id="SJn-8k-9Aa"/>
+                        <outlet property="stressor4TextField" destination="5Ho-Y6-LEl" id="Dpu-SN-3s3"/>
+                        <outlet property="stressor5TextField" destination="s8N-My-5sf" id="kT1-VL-IrK"/>
                         <segue destination="5At-Cb-yLJ" kind="unwind" identifier="doneSegue1" unwindAction="unwind:" id="gwg-py-59H"/>
                     </connections>
                 </viewController>
@@ -662,7 +690,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPM-F2-CxF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPM-F2-CxF">
                                 <rect key="frame" x="140" y="242" width="110" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -735,8 +763,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="moodNumberLabelOutlet" destination="FPM-F2-CxF" id="JmD-Z2-D1A"/>
-                        <outlet property="sliderOutlet" destination="hbK-Eu-vGg" id="kQN-NZ-m5W"/>
+                        <outlet property="goalTextField" destination="osG-qF-CQd" id="e7h-NL-tRj"/>
+                        <outlet property="moodNumberLabel" destination="FPM-F2-CxF" id="3st-Rh-lcg"/>
+                        <outlet property="slider" destination="hbK-Eu-vGg" id="MqC-9N-En1"/>
+                        <outlet property="stressorTextField" destination="cBY-Y6-axr" id="e6W-Za-08N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYg-WQ-Uvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -765,7 +795,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxK-Zp-CMu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxK-Zp-CMu">
                                 <rect key="frame" x="125" y="246" width="110" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -777,6 +807,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <imageReference key="minimumValueImage" image="1.square.fill" catalog="system" symbolScale="large"/>
                                 <imageReference key="maximumValueImage" image="10.square.fill" catalog="system" symbolScale="large"/>
+                                <connections>
+                                    <action selector="moodNumberChangedAction:" destination="RiJ-Cc-dLO" eventType="valueChanged" id="EXp-tc-HYc"/>
+                                </connections>
                             </slider>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What has been your greatest stressor in this portion of practice?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xih-6W-gr7">
                                 <rect key="frame" x="16" y="373" width="358" height="56"/>
@@ -834,6 +867,12 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="goalTextField" destination="zFw-EQ-HP4" id="CPd-e9-MY5"/>
+                        <outlet property="moodNumberLabel" destination="WxK-Zp-CMu" id="kQm-p2-Uvt"/>
+                        <outlet property="slider" destination="A8M-fo-PoS" id="cmy-dS-nuJ"/>
+                        <outlet property="stressorTextField" destination="RTV-RI-TxE" id="MxE-hG-jxr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yvu-sY-KlO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

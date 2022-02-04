@@ -68,35 +68,36 @@ public class Survey: Codable{
         alleviate = a
     }
     
-    public class TempVariables{
-        
-        static var name: String = ""
-        static var date : Date = Date()
-        static var beforeMood : Int = 0
-        static var expect: String = ""
-        static var goal : String = ""
-        static var beginningMood : Int = 0
-        static var beginningStressor : String = ""
-        static var beginningGoal : String = ""
-        static var middleMood : Int = 0
-        static var middleStressor : String = ""
-        static var middleGoal : String = ""
-        static var endMood : Int = 0
-        static var endStressor : String = ""
-        static var endGoal : String = ""
-        static var afterMood : Int = 0
-        static var overall: String = ""
-        static var happy: String = ""
-        static var upset: String = ""
-        static var stressor1: String = ""
-        static var stressor2: String = ""
-        static var stressor3: String = ""
-        static var stressor4: String = ""
-        static var stressor5: String = ""
-        static var mostStressed: String = ""
-        static var alleviate: String = ""
-        
-        
-    }
+    
+}
+
+public class TempVariables{
+    
+    static var name: String = ""
+    static var date : Date = Date()
+    static var beforeMood : Int = 0
+    static var expect: String = ""
+    static var goal : String = ""
+    static var beginningMood : Int = 0
+    static var beginningStressor : String = ""
+    static var beginningGoal : String = ""
+    static var middleMood : Int = 0
+    static var middleStressor : String = ""
+    static var middleGoal : String = ""
+    static var endMood : Int = 0
+    static var endStressor : String = ""
+    static var endGoal : String = ""
+    static var afterMood : Int = 0
+    static var overall: String = ""
+    static var happy: String = ""
+    static var upset: String = ""
+    static var stressor1: String = ""
+    static var stressor2: String = ""
+    static var stressor3: String = ""
+    static var stressor4: String = ""
+    static var stressor5: String = ""
+    static var mostStressed: String = ""
+    static var alleviate: String = ""
+    
     
 }
