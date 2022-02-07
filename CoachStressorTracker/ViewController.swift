@@ -18,15 +18,22 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         pastStressorsTableViewOutlet.dataSource = self
         pastSurveysTableViewOutlet.delegate = self
         pastSurveysTableViewOutlet.dataSource = self
+        
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        pastStressorsTableViewOutlet.reloadData()
+        pastSurveysTableViewOutlet.reloadData()
+
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == pastStressorsTableViewOutlet{
-            return 1 //stressorArray.count
+            return Statics.stressorArray.count
         }
         else if tableView == pastSurveysTableViewOutlet{
-            return 1 //surveyArray.count
+            return Statics.surveyArray.count
         }
         else{
             return  0

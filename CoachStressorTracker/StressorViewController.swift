@@ -26,7 +26,33 @@ class StressorViewController: UIViewController {
     }
     
     @IBAction func doneButtonAction(_ sender: UIButton) {
+        if let s1 = stressor1TextField.text{
+            TempVariables.stressor1 = s1
+        }
+        if let s2 = stressor2TextField.text{
+            TempVariables.stressor2 = s2
+        }
+        if let s3 = stressor3TextField.text{
+            TempVariables.stressor3 = s3
+        }
+        if let s4 = stressor4TextField.text{
+            TempVariables.stressor4 = s4
+        }
+        if let s5 = stressor5TextField.text{
+            TempVariables.stressor5 = s5
+        }
+        if let mostStressed = mostStressedTextField.text{
+            TempVariables.mostStressed = mostStressed
+        }
+        if let alleviate = alleviateTextField.text{
+            TempVariables.alleviate = alleviate
+        }
+        
+        var survey = Survey(n: TempVariables.name, d: TempVariables.date, bm: TempVariables.beforeMood, e: TempVariables.expect, g: TempVariables.goal, begm: TempVariables.beginningMood, begs: TempVariables.beginningStressor, begg: TempVariables.beginningGoal, midm: TempVariables.middleMood, mids: TempVariables.middleStressor, midg: TempVariables.middleGoal, endm: TempVariables.endMood, ends: TempVariables.endStressor, endg: TempVariables.endGoal, am: TempVariables.afterMood, o: TempVariables.overall, h: TempVariables.happy, u: TempVariables.upset, s1: TempVariables.stressor1, s2: TempVariables.stressor2, s3: TempVariables.stressor3, s4: TempVariables.stressor4, s5: TempVariables.stressor5, ms: TempVariables.mostStressed, a: TempVariables.alleviate)
+        print(survey.endMood)
+        print(survey.alleviate)
         performSegue(withIdentifier: "doneSegue1", sender: self)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
