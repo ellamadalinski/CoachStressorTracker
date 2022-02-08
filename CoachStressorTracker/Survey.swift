@@ -9,7 +9,18 @@ import Foundation
 
 public class Statics: Codable {
     public static var surveyArray = [Survey]()
-    public static var stressorArray = [String]()
+    public static var stressorArray = [Stressor]()
+    
+}
+
+public class Stressor: Codable{
+    var stressor : String
+    var date: Date
+    
+    init(s:String, d:Date){
+        stressor = s
+        date = d
+    }
     
 }
 

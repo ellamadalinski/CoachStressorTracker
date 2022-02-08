@@ -49,6 +49,28 @@ class StressorViewController: UIViewController {
         }
         
         var survey = Survey(n: TempVariables.name, d: TempVariables.date, bm: TempVariables.beforeMood, e: TempVariables.expect, g: TempVariables.goal, begm: TempVariables.beginningMood, begs: TempVariables.beginningStressor, begg: TempVariables.beginningGoal, midm: TempVariables.middleMood, mids: TempVariables.middleStressor, midg: TempVariables.middleGoal, endm: TempVariables.endMood, ends: TempVariables.endStressor, endg: TempVariables.endGoal, am: TempVariables.afterMood, o: TempVariables.overall, h: TempVariables.happy, u: TempVariables.upset, s1: TempVariables.stressor1, s2: TempVariables.stressor2, s3: TempVariables.stressor3, s4: TempVariables.stressor4, s5: TempVariables.stressor5, ms: TempVariables.mostStressed, a: TempVariables.alleviate)
+        Statics.surveyArray.append(survey)
+        
+        if stressor1TextField.text != ""{
+            var stressor1 = Stressor(s: TempVariables.stressor1, d: TempVariables.date)
+            Statics.stressorArray.append(stressor1)
+        }
+        if stressor2TextField.text != ""{
+            var stressor2 = Stressor(s: TempVariables.stressor2, d: TempVariables.date)
+            Statics.stressorArray.append(stressor2)
+        }
+        if stressor3TextField.text != ""{
+            var stressor3 = Stressor(s: TempVariables.stressor3, d: TempVariables.date)
+            Statics.stressorArray.append(stressor3)
+        }
+        if stressor4TextField.text != ""{
+            var stressor4 = Stressor(s: TempVariables.stressor4, d: TempVariables.date)
+            Statics.stressorArray.append(stressor4)
+        }
+        if stressor5TextField.text != ""{
+            var stressor5 = Stressor(s: TempVariables.stressor5, d: TempVariables.date)
+            Statics.stressorArray.append(stressor5)
+        }
         print(survey.endMood)
         print(survey.alleviate)
         performSegue(withIdentifier: "doneSegue1", sender: self)

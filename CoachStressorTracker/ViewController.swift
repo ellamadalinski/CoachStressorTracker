@@ -32,11 +32,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         if tableView == pastStressorsTableViewOutlet{
             return Statics.stressorArray.count
         }
-        else if tableView == pastSurveysTableViewOutlet{
-            return Statics.surveyArray.count
-        }
         else{
-            return  0
+            return Statics.surveyArray.count
         }
     }
     
@@ -45,12 +42,14 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == pastStressorsTableViewOutlet{
             let cell = tableView.dequeueReusableCell(withIdentifier: "myStressorCell", for: indexPath)
-            //populate the cell here
+            cell.textLabel?.text = Statics.stressorArray[indexPath.row].stressor
+            cell.detailTextLabel?.text = String(Statics.stressorArray[indexPath.row].date.hashValue)
             return cell
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "mySurveyCell", for: indexPath)
-            cell.detailTextLabel!.text = "Hi"
+            //cell.textLabel?.text = Statics.surveyArray[indexPath.row].date.
+            cell.detailTextLabel!.text = Statics.surveyArray[indexPath.row].name
             return cell
         }
     }
