@@ -54,22 +54,27 @@ class StressorViewController: UIViewController {
         if stressor1TextField.text != ""{
             var stressor1 = Stressor(s: TempVariables.stressor1, d: TempVariables.date)
             Statics.stressorArray.append(stressor1)
+            print("appending1")
         }
         if stressor2TextField.text != ""{
             var stressor2 = Stressor(s: TempVariables.stressor2, d: TempVariables.date)
             Statics.stressorArray.append(stressor2)
+            print("appending2")
         }
         if stressor3TextField.text != ""{
             var stressor3 = Stressor(s: TempVariables.stressor3, d: TempVariables.date)
             Statics.stressorArray.append(stressor3)
+            print("appending3")
         }
         if stressor4TextField.text != ""{
             var stressor4 = Stressor(s: TempVariables.stressor4, d: TempVariables.date)
             Statics.stressorArray.append(stressor4)
+            print("appending4")
         }
         if stressor5TextField.text != ""{
             var stressor5 = Stressor(s: TempVariables.stressor5, d: TempVariables.date)
             Statics.stressorArray.append(stressor5)
+            print("appending5")
         }
         print(survey.endMood)
         print(survey.alleviate)

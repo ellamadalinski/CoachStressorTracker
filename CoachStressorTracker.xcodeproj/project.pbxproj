@@ -14,6 +14,7 @@
 		B614B9AA278C798A005311EF /* CoachStressorTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B614B9A8278C798A005311EF /* CoachStressorTracker.xcdatamodeld */; };
 		B614B9AC278C798C005311EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B614B9AB278C798C005311EF /* Assets.xcassets */; };
 		B614B9AF278C798C005311EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B614B9AD278C798C005311EF /* LaunchScreen.storyboard */; };
+		B6201E5227B3FD670054DCA1 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6201E5127B3FD670054DCA1 /* ResponseViewController.swift */; };
 		B640B9BF2790670E00BF5B92 /* AfterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640B9BE2790670E00BF5B92 /* AfterViewController.swift */; };
 		B640B9C12790672600BF5B92 /* BeforeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640B9C02790672600BF5B92 /* BeforeViewController.swift */; };
 		B640B9C32790673400BF5B92 /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640B9C22790673400BF5B92 /* StressorViewController.swift */; };
@@ -34,6 +35,7 @@
 		B614B9AB278C798C005311EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B614B9AE278C798C005311EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B614B9B0278C798C005311EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6201E5127B3FD670054DCA1 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
 		B640B9BE2790670E00BF5B92 /* AfterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterViewController.swift; sourceTree = "<group>"; };
 		B640B9C02790672600BF5B92 /* BeforeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeViewController.swift; sourceTree = "<group>"; };
 		B640B9C22790673400BF5B92 /* StressorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StressorViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				B614B9A1278C798A005311EF /* SceneDelegate.swift */,
 				B614B9A3278C798A005311EF /* ViewController.swift */,
 				B614B9A5278C798A005311EF /* Main.storyboard */,
+				B6201E5127B3FD670054DCA1 /* ResponseViewController.swift */,
 				B6B36EBA27A42C0200337E19 /* BeginningViewController.swift */,
 				B6B36EBC27A42C0D00337E19 /* MiddleViewController.swift */,
 				B6B36EBE27A42C1B00337E19 /* EndViewController.swift */,
@@ -174,6 +177,7 @@
 				B6B36EBB27A42C0200337E19 /* BeginningViewController.swift in Sources */,
 				B640B9BF2790670E00BF5B92 /* AfterViewController.swift in Sources */,
 				B614B9A2278C798A005311EF /* SceneDelegate.swift in Sources */,
+				B6201E5227B3FD670054DCA1 /* ResponseViewController.swift in Sources */,
 				B6D525A3278DBC69003E1619 /* SurveyViewController.swift in Sources */,
 				B640B9C12790672600BF5B92 /* BeforeViewController.swift in Sources */,
 				B640B9C32790673400BF5B92 /* StressorViewController.swift in Sources */,

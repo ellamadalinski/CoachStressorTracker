@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource{
     
@@ -43,12 +44,24 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         if tableView == pastStressorsTableViewOutlet{
             let cell = tableView.dequeueReusableCell(withIdentifier: "myStressorCell", for: indexPath)
             cell.textLabel?.text = Statics.stressorArray[indexPath.row].stressor
-            cell.detailTextLabel?.text = String(Statics.stressorArray[indexPath.row].date.hashValue)
+            
+            let date = Statics.stressorArray[indexPath.row].date
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM.dd.yyyy"
+            let result = dateFormatter.string(from: date)
+            
+            cell.detailTextLabel?.text = result
             return cell
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "mySurveyCell", for: indexPath)
-            //cell.textLabel?.text = Statics.surveyArray[indexPath.row].date.
+            
+            let date = Statics.surveyArray[indexPath.row].date
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM.dd.yyyy"
+            let result = dateFormatter.string(from: date)
+            cell.textLabel?.text = result
+            
             cell.detailTextLabel!.text = Statics.surveyArray[indexPath.row].name
             return cell
         }
