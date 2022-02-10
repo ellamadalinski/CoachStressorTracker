@@ -22,6 +22,7 @@
 		B6B36EBB27A42C0200337E19 /* BeginningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B36EBA27A42C0200337E19 /* BeginningViewController.swift */; };
 		B6B36EBD27A42C0D00337E19 /* MiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B36EBC27A42C0D00337E19 /* MiddleViewController.swift */; };
 		B6B36EBF27A42C1B00337E19 /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B36EBE27A42C1B00337E19 /* EndViewController.swift */; };
+		B6CCDC4B27B54E3A0051EE84 /* StressorResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCDC4A27B54E3A0051EE84 /* StressorResponseViewController.swift */; };
 		B6D525A3278DBC69003E1619 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D525A2278DBC69003E1619 /* SurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		B6B36EBA27A42C0200337E19 /* BeginningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginningViewController.swift; sourceTree = "<group>"; };
 		B6B36EBC27A42C0D00337E19 /* MiddleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleViewController.swift; sourceTree = "<group>"; };
 		B6B36EBE27A42C1B00337E19 /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
+		B6CCDC4A27B54E3A0051EE84 /* StressorResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StressorResponseViewController.swift; sourceTree = "<group>"; };
 		B6D525A2278DBC69003E1619 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				B614B9A1278C798A005311EF /* SceneDelegate.swift */,
 				B614B9A3278C798A005311EF /* ViewController.swift */,
 				B614B9A5278C798A005311EF /* Main.storyboard */,
+				B6CCDC4A27B54E3A0051EE84 /* StressorResponseViewController.swift */,
 				B6201E5127B3FD670054DCA1 /* ResponseViewController.swift */,
 				B6B36EBA27A42C0200337E19 /* BeginningViewController.swift */,
 				B6B36EBC27A42C0D00337E19 /* MiddleViewController.swift */,
@@ -176,6 +179,7 @@
 				B692A452278F118200F1E823 /* Survey.swift in Sources */,
 				B6B36EBB27A42C0200337E19 /* BeginningViewController.swift in Sources */,
 				B640B9BF2790670E00BF5B92 /* AfterViewController.swift in Sources */,
+				B6CCDC4B27B54E3A0051EE84 /* StressorResponseViewController.swift in Sources */,
 				B614B9A2278C798A005311EF /* SceneDelegate.swift in Sources */,
 				B6201E5227B3FD670054DCA1 /* ResponseViewController.swift in Sources */,
 				B6D525A3278DBC69003E1619 /* SurveyViewController.swift in Sources */,

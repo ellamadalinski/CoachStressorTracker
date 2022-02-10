@@ -70,7 +70,11 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //view the survey (NOT for stressors)
+        if tableView == pastSurveysTableViewOutlet{
+            TempVariables.name = Statics.surveyArray[indexPath.row].name
+            TempVariables.date = Statics.surveyArray[indexPath.row].date
+            //FINISH SETTING TEMP VARIABLES, THEN MOVE TO RESPONSE VC
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
