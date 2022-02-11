@@ -73,7 +73,22 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         if tableView == pastSurveysTableViewOutlet{
             TempVariables.name = Statics.surveyArray[indexPath.row].name
             TempVariables.date = Statics.surveyArray[indexPath.row].date
-            //FINISH SETTING TEMP VARIABLES, THEN MOVE TO RESPONSE VC
+            TempVariables.beforeMood = Statics.surveyArray[indexPath.row].beforeMood
+            TempVariables.expect = Statics.surveyArray[indexPath.row].expect
+            TempVariables.goal = Statics.surveyArray[indexPath.row].goal
+            TempVariables.beginningMood = Statics.surveyArray[indexPath.row].beginningMood
+            TempVariables.beginningStressor = Statics.surveyArray[indexPath.row].beginningStressor
+            TempVariables.beginningGoal = Statics.surveyArray[indexPath.row].beginningGoal
+            TempVariables.middleMood = Statics.surveyArray[indexPath.row].middleMood
+            TempVariables.middleStressor = Statics.surveyArray[indexPath.row].middleStressor
+            TempVariables.middleGoal = Statics.surveyArray[indexPath.row].middleGoal
+            TempVariables.endMood = Statics.surveyArray[indexPath.row].endMood
+            TempVariables.endStressor = Statics.surveyArray[indexPath.row].endStressor
+            TempVariables.endGoal = Statics.surveyArray[indexPath.row].endGoal
+            
+            
+            
+            performSegue(withIdentifier: "homeToResponse", sender: nil)
         }
     }
     

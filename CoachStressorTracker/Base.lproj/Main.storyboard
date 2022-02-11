@@ -102,6 +102,7 @@
                     <connections>
                         <outlet property="pastStressorsTableViewOutlet" destination="v0s-0a-bdc" id="YsB-9o-w0g"/>
                         <outlet property="pastSurveysTableViewOutlet" destination="Y7F-OP-IZx" id="Kpa-dT-7rV"/>
+                        <segue destination="ZR6-OG-ugA" kind="show" identifier="homeToResponse" id="IU5-4f-G2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -113,7 +114,7 @@
             <objects>
                 <viewController id="QJN-Hb-hOP" customClass="ResponseViewController" customModule="CoachStressorTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LtW-HK-biq">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuL-SH-vto">
@@ -302,17 +303,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="K75-1E-aHa">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Mhh-ii-DLl">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="fTs-Fc-E3X">
-                                <rect key="frame" x="313" y="5" width="61" height="34.333333333333336"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="fTs-Fc-E3X">
+                                <rect key="frame" x="313" y="11" width="61" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonAction:" destination="QJN-Hb-hOP" eventType="touchUpInside" id="o95-ev-gCl"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="roQ-VO-F1J" kind="show" id="5Ae-a8-E4e"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -334,18 +335,19 @@
                         <outlet property="midStressor" destination="pxz-ay-dbN" id="czb-AK-qL7"/>
                         <outlet property="surveyDate" destination="JXn-Uj-ugU" id="1Q8-fg-OJp"/>
                         <outlet property="surveyName" destination="AuL-SH-vto" id="Bgg-81-x6X"/>
+                        <segue destination="roQ-VO-F1J" kind="show" identifier="responseToStressors" id="sqa-uc-qpQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fm5-u5-kNx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3973.8461538461538" y="-663.27014218009481"/>
+            <point key="canvasLocation" x="4903.0769230769229" y="-663.27014218009481"/>
         </scene>
         <!--Stressor Response View Controller-->
         <scene sceneID="nQw-dG-wge">
             <objects>
                 <viewController id="roQ-VO-F1J" customClass="StressorResponseViewController" customModule="CoachStressorTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="koA-Kd-UTo">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stressors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGs-N5-7RB">
@@ -417,8 +419,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="eqO-rC-39f">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="n6V-Z6-Ef6">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="P44-us-Rfj">
-                                <rect key="frame" x="288" y="5" width="86" height="34.333333333333336"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="P44-us-Rfj">
+                                <rect key="frame" x="288" y="11" width="86" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -439,7 +441,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9y-lk-1qN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4744.6153846153848" y="-663.27014218009481"/>
+            <point key="canvasLocation" x="5673.8461538461534" y="-663.27014218009481"/>
         </scene>
         <!--Survey View Controller-->
         <scene sceneID="nPy-Ps-BP8">
@@ -1212,22 +1214,23 @@
             <point key="canvasLocation" x="4605" y="761"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="LiO-NH-kBQ">
+        <scene sceneID="Ixg-M6-QGI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Yb-6b-j24" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ZR6-OG-ugA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h1q-XO-okq">
+                    <navigationItem key="navigationItem" id="caX-9K-OTO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eGm-NT-VBv">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="QJN-Hb-hOP" kind="relationship" relationship="rootViewController" id="2ce-4q-6S0"/>
+                        <segue destination="QJN-Hb-hOP" kind="relationship" relationship="rootViewController" id="mx3-jl-yPf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ISx-Hv-M4R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="574-tz-33B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3074" y="-663"/>
+            <point key="canvasLocation" x="3973.8461538461538" y="-663.27014218009481"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

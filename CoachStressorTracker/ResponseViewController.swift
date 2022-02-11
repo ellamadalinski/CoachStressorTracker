@@ -36,5 +36,9 @@ class ResponseViewController: UIViewController {
     }
     
     
-
+    @IBAction func nextButtonAction(_ sender: UIButton) {
+        print("hi")
+        performSegue(withIdentifier: "responseToStressors", sender: nil)
+    }
+    
 }
