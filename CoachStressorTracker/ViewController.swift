@@ -85,8 +85,17 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             TempVariables.endMood = Statics.surveyArray[indexPath.row].endMood
             TempVariables.endStressor = Statics.surveyArray[indexPath.row].endStressor
             TempVariables.endGoal = Statics.surveyArray[indexPath.row].endGoal
-            
-            
+            TempVariables.afterMood = Statics.surveyArray[indexPath.row].afterMood
+            TempVariables.overall = Statics.surveyArray[indexPath.row].overall
+            TempVariables.happy = Statics.surveyArray[indexPath.row].happy
+            TempVariables.upset = Statics.surveyArray[indexPath.row].upset
+            TempVariables.stressor1 = Statics.surveyArray[indexPath.row].stressor1
+            TempVariables.stressor2 = Statics.surveyArray[indexPath.row].stressor2
+            TempVariables.stressor3 = Statics.surveyArray[indexPath.row].stressor3
+            TempVariables.stressor4 = Statics.surveyArray[indexPath.row].stressor4
+            TempVariables.stressor5 = Statics.surveyArray[indexPath.row].stressor5
+            TempVariables.mostStressed = Statics.surveyArray[indexPath.row].mostStressed
+            TempVariables.alleviate = Statics.surveyArray[indexPath.row].alleviate
             
             performSegue(withIdentifier: "homeToResponse", sender: nil)
         }

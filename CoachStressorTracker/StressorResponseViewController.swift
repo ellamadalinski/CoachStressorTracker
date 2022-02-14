@@ -21,7 +21,14 @@ class StressorResponseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        stressor1.text! += TempVariables.stressor1
+        stressor2.text! += TempVariables.stressor2
+        stressor3.text! += TempVariables.stressor3
+        stressor4.text! += TempVariables.stressor4
+        stressor4.text! += TempVariables.stressor4
+        mostStressed.text! += TempVariables.mostStressed
+        alleviate.text! += TempVariables.alleviate
+        
     }
     
     
