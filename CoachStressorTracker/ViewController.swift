@@ -150,10 +150,11 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             
             return [delete]
         }
-            
         
-        
-        
+    }
+    
+    @IBAction func unwind(_ seg : UIStoryboardSegue){
+        print("unwinded")
     }
 
 }

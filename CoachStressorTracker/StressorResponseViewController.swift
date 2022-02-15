@@ -32,5 +32,8 @@ class StressorResponseViewController: UIViewController {
     }
     
     
-
+    @IBAction func doneButtonAction(_ sender: UIButton) {
+    performSegue(withIdentifier: "stressorDoneSegue", sender: nil)
+    }
+    
 }

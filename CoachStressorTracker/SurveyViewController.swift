@@ -14,6 +14,7 @@ class SurveyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
     }
     
@@ -31,6 +32,7 @@ class SurveyViewController: UIViewController {
         TempVariables.date = datePickerOutlet.date
         
     }
+    
     
     
 }
