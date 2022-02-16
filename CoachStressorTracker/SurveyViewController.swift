@@ -7,15 +7,20 @@
 
 import UIKit
 
-class SurveyViewController: UIViewController {
+class SurveyViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameOutlet: UITextField!
     @IBOutlet weak var datePickerOutlet: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nameOutlet.delegate = self
 
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameOutlet.resignFirstResponder()
+        return true
     }
     
     @IBAction func unwind(_ seg : UIStoryboardSegue){

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BeforeViewController: UIViewController {
+class BeforeViewController: UIViewController , UITextFieldDelegate{
     
 
     @IBOutlet weak var moodNumberLabel: UILabel!
@@ -21,11 +21,25 @@ class BeforeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        expectingTextField.delegate = self
+        goalTextField.delegate = self
+        
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
         mood = Int(slider.value)
         moodNumberLabel.text = "\(mood)"
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if expectingTextField.isEditing{
+            expectingTextField.resignFirstResponder()
+            goalTextField.becomeFirstResponder()
+        }
+        else{
+            goalTextField.resignFirstResponder()
+        }
+        return true
     }
     
 

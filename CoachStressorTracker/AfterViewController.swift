@@ -9,7 +9,7 @@
 
 import UIKit
 
-class AfterViewController: UIViewController {
+class AfterViewController: UIViewController , UITextFieldDelegate{
     
     @IBOutlet weak var moodNumberLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
@@ -23,10 +23,29 @@ class AfterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        overallTextField.delegate = self
+        happyTextField.delegate = self
+        upsetTextField.delegate = self
 
         mood = Int(slider.value)
         moodNumberLabel.text = "\(mood)"
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if overallTextField.isEditing{
+            overallTextField.resignFirstResponder()
+            happyTextField.becomeFirstResponder()
+        }
+        else if happyTextField.isEditing{
+            happyTextField.resignFirstResponder()
+            upsetTextField.becomeFirstResponder()
+        }
+        else{
+            upsetTextField.resignFirstResponder()
+        }
+        return true
     }
     
     

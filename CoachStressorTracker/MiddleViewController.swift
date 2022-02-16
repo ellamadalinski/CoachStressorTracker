@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MiddleViewController: UIViewController {
+class MiddleViewController: UIViewController , UITextFieldDelegate{
 
     @IBOutlet weak var moodNumberLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
@@ -21,11 +21,24 @@ class MiddleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        stressorTextField.delegate = self
+        goalTextField.delegate = self
+        
         mood = Int(slider.value)
         moodNumberLabel.text = "\(mood)"
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if stressorTextField.isEditing{
+            stressorTextField.resignFirstResponder()
+            goalTextField.becomeFirstResponder()
+        }
+        else{
+            goalTextField.resignFirstResponder()
+        }
+        return true
+    }
 
     @IBAction func moodNumberChangedAction(_ sender: UISlider) {
         mood = Int(slider.value)
