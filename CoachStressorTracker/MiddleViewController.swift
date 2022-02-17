@@ -15,7 +15,7 @@ class MiddleViewController: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var goalTextField: UITextField!
     
     
-    var mood = 0
+    var mood = 5
     
     
     override func viewDidLoad() {
@@ -23,9 +23,6 @@ class MiddleViewController: UIViewController , UITextFieldDelegate{
         
         stressorTextField.delegate = self
         goalTextField.delegate = self
-        
-        mood = Int(slider.value)
-        moodNumberLabel.text = "\(mood)"
         
     }
     
@@ -56,4 +53,12 @@ class MiddleViewController: UIViewController , UITextFieldDelegate{
         }
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        moodNumberLabel.text = String(TempVariables.middleMood)
+        slider.value = Float(TempVariables.middleMood)
+        stressorTextField.text = TempVariables.middleStressor
+        goalTextField.text = TempVariables.middleGoal
+    }
+    
 }

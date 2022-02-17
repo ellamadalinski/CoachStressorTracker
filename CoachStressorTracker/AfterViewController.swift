@@ -18,7 +18,7 @@ class AfterViewController: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var upsetTextField: UITextField!
     
     
-    var mood = 0
+    var mood = 5
     
     
     override func viewDidLoad() {
@@ -28,9 +28,6 @@ class AfterViewController: UIViewController , UITextFieldDelegate{
         happyTextField.delegate = self
         upsetTextField.delegate = self
 
-        mood = Int(slider.value)
-        moodNumberLabel.text = "\(mood)"
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -68,6 +65,14 @@ class AfterViewController: UIViewController , UITextFieldDelegate{
             TempVariables.upset = upset
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        moodNumberLabel.text = String(TempVariables.afterMood)
+        slider.value = Float(TempVariables.afterMood)
+        overallTextField.text = TempVariables.overall
+        happyTextField.text = TempVariables.happy
+        upsetTextField.text = TempVariables.upset
     }
 
 }

@@ -15,19 +15,18 @@ class BeforeViewController: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var expectingTextField: UITextField!
     @IBOutlet weak var goalTextField: UITextField!
     
-    var mood = 0
+    var mood = 5
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("loaded1")
+        
         expectingTextField.delegate = self
         goalTextField.delegate = self
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
-        
-        mood = Int(slider.value)
-        moodNumberLabel.text = "\(mood)"
         
     }
     
@@ -62,6 +61,13 @@ class BeforeViewController: UIViewController , UITextFieldDelegate{
             TempVariables.goal = goal
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        moodNumberLabel.text = String(TempVariables.beforeMood)
+        slider.value = Float(TempVariables.beforeMood)
+        expectingTextField.text = TempVariables.expect
+        goalTextField.text = TempVariables.goal
     }
     
 

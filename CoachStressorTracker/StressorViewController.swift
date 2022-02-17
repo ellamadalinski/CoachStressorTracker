@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StressorViewController: UIViewController {
+class StressorViewController: UIViewController , UITextFieldDelegate{
     
     @IBOutlet weak var stressor1TextField: UITextField!
     @IBOutlet weak var stressor2TextField: UITextField!
@@ -22,9 +22,48 @@ class StressorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        stressor1TextField.delegate = self
+        stressor2TextField.delegate = self
+        stressor3TextField.delegate = self
+        stressor4TextField.delegate = self
+        stressor5TextField.delegate = self
+        mostStressedTextField.delegate = self
+        alleviateTextField.delegate = self
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if stressor1TextField.isEditing{
+            stressor1TextField.resignFirstResponder()
+            stressor2TextField.becomeFirstResponder()
+        }
+        else if stressor2TextField.isEditing{
+            stressor2TextField.resignFirstResponder()
+            stressor3TextField.becomeFirstResponder()
+        }
+        else if stressor3TextField.isEditing{
+            stressor3TextField.resignFirstResponder()
+            stressor4TextField.becomeFirstResponder()
+        }
+        else if stressor4TextField.isEditing{
+            stressor4TextField.resignFirstResponder()
+            stressor5TextField.becomeFirstResponder()
+        }
+        else if stressor5TextField.isEditing{
+            stressor5TextField.resignFirstResponder()
+            mostStressedTextField.becomeFirstResponder()
+        }
+        else if mostStressedTextField.isEditing{
+            mostStressedTextField.resignFirstResponder()
+            alleviateTextField.becomeFirstResponder()
+        }
+        else{
+            alleviateTextField.resignFirstResponder()
+        }
+        return true
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -74,27 +113,27 @@ class StressorViewController: UIViewController {
         
         if stressor1TextField.text != ""{
             var stressor1 = Stressor(s: TempVariables.stressor1, d: TempVariables.date)
-            Statics.stressorArray.append(stressor1)
+            Statics.stressorArray.insert(stressor1, at: 0)
             print("appending1")
         }
         if stressor2TextField.text != ""{
             var stressor2 = Stressor(s: TempVariables.stressor2, d: TempVariables.date)
-            Statics.stressorArray.append(stressor2)
+            Statics.stressorArray.insert(stressor2, at: 0)
             print("appending2")
         }
         if stressor3TextField.text != ""{
             var stressor3 = Stressor(s: TempVariables.stressor3, d: TempVariables.date)
-            Statics.stressorArray.append(stressor3)
+            Statics.stressorArray.insert(stressor3, at: 0)
             print("appending3")
         }
         if stressor4TextField.text != ""{
             var stressor4 = Stressor(s: TempVariables.stressor4, d: TempVariables.date)
-            Statics.stressorArray.append(stressor4)
+            Statics.stressorArray.insert(stressor4, at: 0)
             print("appending4")
         }
         if stressor5TextField.text != ""{
             var stressor5 = Stressor(s: TempVariables.stressor5, d: TempVariables.date)
-            Statics.stressorArray.append(stressor5)
+            Statics.stressorArray.insert(stressor5, at: 0)
             print("appending5")
         }
         print(survey.endMood)
@@ -127,6 +166,16 @@ class StressorViewController: UIViewController {
             TempVariables.alleviate = alleviate
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        stressor1TextField.text = TempVariables.stressor1
+        stressor2TextField.text = TempVariables.stressor2
+        stressor3TextField.text = TempVariables.stressor3
+        stressor4TextField.text = TempVariables.stressor4
+        stressor5TextField.text = TempVariables.stressor5
+        mostStressedTextField.text = TempVariables.mostStressed
+        alleviateTextField.text = TempVariables.alleviate
     }
 
 }
