@@ -68,6 +68,7 @@ class AfterViewController: UIViewController , UITextFieldDelegate{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        mood = TempVariables.afterMood
         moodNumberLabel.text = String(TempVariables.afterMood)
         slider.value = Float(TempVariables.afterMood)
         overallTextField.text = TempVariables.overall

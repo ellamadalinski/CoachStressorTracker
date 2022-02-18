@@ -38,6 +38,11 @@ class SurveyViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        nameOutlet.text = TempVariables.name
+        datePickerOutlet.date = TempVariables.date
+    }
+    
     
     
 }

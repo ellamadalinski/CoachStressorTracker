@@ -136,8 +136,33 @@ class StressorViewController: UIViewController , UITextFieldDelegate{
             Statics.stressorArray.insert(stressor5, at: 0)
             print("appending5")
         }
-        print(survey.endMood)
-        print(survey.alleviate)
+        
+        TempVariables.name = ""
+        TempVariables.date = Date()
+        TempVariables.beforeMood = 5
+        TempVariables.expect = ""
+        TempVariables.goal = ""
+        TempVariables.beginningMood = 5
+        TempVariables.beginningStressor = ""
+        TempVariables.beginningGoal = ""
+        TempVariables.middleMood = 5
+        TempVariables.middleStressor = ""
+        TempVariables.middleGoal = ""
+        TempVariables.endMood = 5
+        TempVariables.endStressor = ""
+        TempVariables.endGoal = ""
+        TempVariables.afterMood = 5
+        TempVariables.overall = ""
+        TempVariables.happy = ""
+        TempVariables.upset = ""
+        TempVariables.stressor1 = ""
+        TempVariables.stressor2 = ""
+        TempVariables.stressor3 = ""
+        TempVariables.stressor4 = ""
+        TempVariables.stressor5 = ""
+        TempVariables.mostStressed = ""
+        TempVariables.alleviate = ""
+        
         performSegue(withIdentifier: "doneSegue1", sender: self)
         
     }
@@ -165,7 +190,7 @@ class StressorViewController: UIViewController , UITextFieldDelegate{
         if let alleviate = alleviateTextField.text{
             TempVariables.alleviate = alleviate
         }
-        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

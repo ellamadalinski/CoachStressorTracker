@@ -64,6 +64,7 @@ class BeforeViewController: UIViewController , UITextFieldDelegate{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        mood = TempVariables.beforeMood
         moodNumberLabel.text = String(TempVariables.beforeMood)
         slider.value = Float(TempVariables.beforeMood)
         expectingTextField.text = TempVariables.expect

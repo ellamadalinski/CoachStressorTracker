@@ -106,46 +106,55 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         return true
     }
     
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        
-//        if tableView == pastStressorsTableViewOutlet{
-//            if editingStyle == .delete {
-//                Statics.stressorArray.remove(at: indexPath.row)
-//                tableView.deleteRows(at: [indexPath], with: .fade)
-//                tableView.reloadData()
-//            }
-//        }
-//        else if tableView == pastSurveysTableViewOutlet{
-//
-//            if editingStyle == .delete {
-//                Statics.surveyArray.remove(at: indexPath.row)
-//                tableView.deleteRows(at: [indexPath], with: .fade)
-//                tableView.reloadData()
-//            }
-//
-//        }
-//
-//
-//    }
     
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         if tableView == pastSurveysTableViewOutlet{
             let edit = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
+                TempVariables.name = Statics.surveyArray[indexPath.row].name
+                TempVariables.date = Statics.surveyArray[indexPath.row].date
+                TempVariables.beforeMood = Statics.surveyArray[indexPath.row].beforeMood
+                TempVariables.expect = Statics.surveyArray[indexPath.row].expect
+                TempVariables.goal = Statics.surveyArray[indexPath.row].goal
+                TempVariables.beginningMood = Statics.surveyArray[indexPath.row].beginningMood
+                TempVariables.beginningStressor = Statics.surveyArray[indexPath.row].beginningStressor
+                TempVariables.beginningGoal = Statics.surveyArray[indexPath.row].beginningGoal
+                TempVariables.middleMood = Statics.surveyArray[indexPath.row].middleMood
+                TempVariables.middleStressor = Statics.surveyArray[indexPath.row].middleStressor
+                TempVariables.middleGoal = Statics.surveyArray[indexPath.row].middleGoal
+                TempVariables.endMood = Statics.surveyArray[indexPath.row].endMood
+                TempVariables.endStressor = Statics.surveyArray[indexPath.row].endStressor
+                TempVariables.endGoal = Statics.surveyArray[indexPath.row].endGoal
+                TempVariables.afterMood = Statics.surveyArray[indexPath.row].afterMood
+                TempVariables.overall = Statics.surveyArray[indexPath.row].overall
+                TempVariables.happy = Statics.surveyArray[indexPath.row].happy
+                TempVariables.upset = Statics.surveyArray[indexPath.row].upset
+                TempVariables.stressor1 = Statics.surveyArray[indexPath.row].stressor1
+                TempVariables.stressor2 = Statics.surveyArray[indexPath.row].stressor2
+                TempVariables.stressor3 = Statics.surveyArray[indexPath.row].stressor3
+                TempVariables.stressor4 = Statics.surveyArray[indexPath.row].stressor4
+                TempVariables.stressor5 = Statics.surveyArray[indexPath.row].stressor5
+                TempVariables.mostStressed = Statics.surveyArray[indexPath.row].mostStressed
+                TempVariables.alleviate = Statics.surveyArray[indexPath.row].alleviate
+                
+                self.tabBarController?.selectedIndex = 1
+                
+                Statics.surveyArray.remove(at: indexPath.row)
+                tableView.reloadData()
                 
             }
             let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
-                
+                Statics.surveyArray.remove(at: indexPath.row)
+                tableView.reloadData()
             }
-            
             return [delete, edit]
-                
         }
         
         else{
             let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
-                
+                Statics.stressorArray.remove(at: indexPath.row)
+                tableView.reloadData()
             }
             
             

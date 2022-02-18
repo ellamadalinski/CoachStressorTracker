@@ -56,6 +56,7 @@ class EndViewController: UIViewController , UITextFieldDelegate{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        mood = TempVariables.endMood
         moodNumberLabel.text = String(TempVariables.endMood)
         slider.value = Float(TempVariables.endMood)
         stressorTextField.text = TempVariables.endStressor

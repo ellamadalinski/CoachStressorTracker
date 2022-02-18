@@ -55,6 +55,7 @@ class MiddleViewController: UIViewController , UITextFieldDelegate{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        mood = TempVariables.middleMood
         moodNumberLabel.text = String(TempVariables.middleMood)
         slider.value = Float(TempVariables.middleMood)
         stressorTextField.text = TempVariables.middleStressor
