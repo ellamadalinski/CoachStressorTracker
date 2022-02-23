@@ -75,5 +75,10 @@ class AfterViewController: UIViewController , UITextFieldDelegate{
         happyTextField.text = TempVariables.happy
         upsetTextField.text = TempVariables.upset
     }
+    
+    @IBAction func saveButtonAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "saveForLater", sender: nil)
+    }
+    
 
 }

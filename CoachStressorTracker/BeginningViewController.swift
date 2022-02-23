@@ -61,4 +61,10 @@ class BeginningViewController: UIViewController , UITextFieldDelegate {
         stressorTextField.text = TempVariables.beginningStressor
         goalTextField.text = TempVariables.beginningGoal
     }
+    
+    @IBAction func saveButtonAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "saveForLater", sender: nil)
+    }
+    
+    
 }

@@ -63,4 +63,9 @@ class EndViewController: UIViewController , UITextFieldDelegate{
         goalTextField.text = TempVariables.endGoal
     }
 
+    @IBAction func saveButtonAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "saveForLater", sender: nil)
+    }
+    
+    
 }

@@ -202,5 +202,6 @@ class StressorViewController: UIViewController , UITextFieldDelegate{
         mostStressedTextField.text = TempVariables.mostStressed
         alleviateTextField.text = TempVariables.alleviate
     }
+    
 
 }

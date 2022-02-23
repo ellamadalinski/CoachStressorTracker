@@ -71,5 +71,8 @@ class BeforeViewController: UIViewController , UITextFieldDelegate{
         goalTextField.text = TempVariables.goal
     }
     
-
+    @IBAction func saveButtonAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "saveForLater", sender: nil)
+    }
+    
 }

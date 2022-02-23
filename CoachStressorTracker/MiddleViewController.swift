@@ -62,4 +62,9 @@ class MiddleViewController: UIViewController , UITextFieldDelegate{
         goalTextField.text = TempVariables.middleGoal
     }
     
+    @IBAction func saveButtonAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "saveForLater", sender: nil)
+    }
+    
+    
 }
