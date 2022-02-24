@@ -86,19 +86,19 @@ public class TempVariables{
     
     static var name: String = ""
     static var date : Date = Date()
-    static var beforeMood : Int = 5
+    static var beforeMood : Int = 0
     static var expect: String = ""
     static var goal : String = ""
-    static var beginningMood : Int = 5
+    static var beginningMood : Int = 0
     static var beginningStressor : String = ""
     static var beginningGoal : String = ""
-    static var middleMood : Int = 5
+    static var middleMood : Int = 0
     static var middleStressor : String = ""
     static var middleGoal : String = ""
-    static var endMood : Int = 5
+    static var endMood : Int = 0
     static var endStressor : String = ""
     static var endGoal : String = ""
-    static var afterMood : Int = 5
+    static var afterMood : Int = 0
     static var overall: String = ""
     static var happy: String = ""
     static var upset: String = ""
