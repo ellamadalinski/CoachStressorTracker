@@ -9,25 +9,13 @@ import UIKit
 
 class ResponseViewController: UIViewController {
     
-
-    @IBOutlet weak var surveyName: UILabel!
-    @IBOutlet weak var surveyDate: UILabel!
-    @IBOutlet weak var beforeMood: UILabel!
-    @IBOutlet weak var beforeExpecting: UITextView!
-    @IBOutlet weak var beforeGoal: UITextView!
-    @IBOutlet weak var begMood: UILabel!
-    @IBOutlet weak var begStressor: UITextView!
-    @IBOutlet weak var begAchieve: UITextView!
-    @IBOutlet weak var midMood: UILabel!
-    @IBOutlet weak var midStressor: UITextView!
-    @IBOutlet weak var midAchieve: UITextView!
-    @IBOutlet weak var endMood: UILabel!
-    @IBOutlet weak var endStressor: UITextView!
-    @IBOutlet weak var endAchieve: UITextView!
-    @IBOutlet weak var afterMood: UILabel!
-    @IBOutlet weak var afterOverall: UITextView!
-    @IBOutlet weak var afterHappy: UITextView!
-    @IBOutlet weak var afterUpset: UITextView!
+    @IBOutlet weak var nameOutlet: UILabel!
+    @IBOutlet weak var dateOutlet: UILabel!
+    @IBOutlet weak var beforeOutlet: UITextView!
+    @IBOutlet weak var beginningOutlet: UITextView!
+    @IBOutlet weak var middleOutlet: UITextView!
+    @IBOutlet weak var endOutlet: UITextView!
+    @IBOutlet weak var afterOutlet: UITextView!
     
     
     override func viewDidLoad() {
@@ -38,24 +26,15 @@ class ResponseViewController: UIViewController {
         dateFormatter.dateFormat = "MM.dd.yyyy"
         let result = dateFormatter.string(from: date)
         
-        surveyName.text! += TempVariables.name
-        surveyDate.text! += result
-        beforeMood.text! += String(TempVariables.beforeMood)
-        beforeExpecting.text! += TempVariables.expect
-        beforeGoal.text! += TempVariables.goal
-        begMood.text! += String(TempVariables.beginningMood)
-        begStressor.text! += TempVariables.beginningStressor
-        begAchieve.text! += TempVariables.beginningGoal
-        midMood.text! += String(TempVariables.middleMood)
-        midStressor.text! += TempVariables.middleStressor
-        midAchieve.text! += TempVariables.middleGoal
-        endMood.text! += String(TempVariables.endMood)
-        endStressor.text! += TempVariables.endStressor
-        endAchieve.text! += TempVariables.endGoal
-        afterMood.text! += String(TempVariables.afterMood)
-        afterOverall.text! += TempVariables.overall
-        afterHappy.text! += TempVariables.happy
-        afterUpset.text! += TempVariables.upset
+        nameOutlet.text = TempVariables.name
+        dateOutlet.text = result
+        beforeOutlet.text = "Mood: \(String(TempVariables.beforeMood))\n\nHow you were expecting the practice to go: \(TempVariables.expect)\n\nGoal you made for yourself and/or the team: \(TempVariables.goal)"
+        beginningOutlet.text = "Mood: \(String(TempVariables.beginningMood))\n\nYour greatest stressor in this portion of practice: \(TempVariables.beginningStressor)\n\nWhat was being done to achieve the goal and how this is working: \(TempVariables.beginningGoal)"
+        middleOutlet.text = "Mood: \(String(TempVariables.middleMood))\n\nYour greatest stressor in this portion of practice: \(TempVariables.middleStressor)\n\nWhat was being done to achieve the goal and how this is working: \(TempVariables.middleGoal)"
+        endOutlet.text = "Mood: \(String(TempVariables.endMood))\n\nYour greatest stressor in this portion of practice: \(TempVariables.endStressor)\n\nWhat was being done to achieve the goal and how this is working: \(TempVariables.endGoal)"
+        afterOutlet.text = "Mood: \(String(TempVariables.afterMood))\n\nHow the practice went overall: \(TempVariables.overall)\n\nSomething that made you happy: \(TempVariables.happy)\n\nSomething that upset you: \(TempVariables.upset)"
+        
+        
         
     }
     

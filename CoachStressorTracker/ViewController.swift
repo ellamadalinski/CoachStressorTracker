@@ -52,6 +52,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             let result = dateFormatter.string(from: date)
             
             cell.detailTextLabel?.text = result
+            
+            //if Statics.stressorArray[indexPath.row].afterMood == 1 ||
+            
             return cell
         }
         else{
