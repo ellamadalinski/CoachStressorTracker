@@ -53,7 +53,6 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             
             cell.detailTextLabel?.text = result
             
-            //if Statics.stressorArray[indexPath.row].afterMood == 1 ||
             
             return cell
         }
@@ -65,7 +64,19 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             dateFormatter.dateFormat = "MM.dd.yyyy"
             let result = dateFormatter.string(from: date)
             cell.textLabel?.text = result
-            
+            var colorNum = Statics.surveyArray[indexPath.row].afterMood
+            if colorNum == 1 || colorNum == 2 || colorNum == 3 {
+                cell.backgroundColor = UIColor.red
+            }
+            else if colorNum == 4 || colorNum == 5 || colorNum == 6 || colorNum == 7 {
+                cell.backgroundColor = UIColor.yellow
+            }
+            else if colorNum == 8 || colorNum == 9 || colorNum == 10 {
+                cell.backgroundColor = UIColor.green
+            }
+            else {
+                cell.backgroundColor = UIColor.lightGray
+            }
             cell.detailTextLabel!.text = Statics.surveyArray[indexPath.row].name
             return cell
         }
