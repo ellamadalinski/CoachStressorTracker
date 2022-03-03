@@ -109,7 +109,7 @@ class StressorViewController: UIViewController , UITextFieldDelegate{
         }
         
         var survey = Survey(n: TempVariables.name, d: TempVariables.date, bm: TempVariables.beforeMood, e: TempVariables.expect, g: TempVariables.goal, begm: TempVariables.beginningMood, begs: TempVariables.beginningStressor, begg: TempVariables.beginningGoal, midm: TempVariables.middleMood, mids: TempVariables.middleStressor, midg: TempVariables.middleGoal, endm: TempVariables.endMood, ends: TempVariables.endStressor, endg: TempVariables.endGoal, am: TempVariables.afterMood, o: TempVariables.overall, h: TempVariables.happy, u: TempVariables.upset, s1: TempVariables.stressor1, s2: TempVariables.stressor2, s3: TempVariables.stressor3, s4: TempVariables.stressor4, s5: TempVariables.stressor5, ms: TempVariables.mostStressed, a: TempVariables.alleviate)
-        Statics.surveyArray.append(survey)
+        Statics.surveyArray.insert(survey, at: 0)
         
         if stressor1TextField.text != ""{
             var stressor1 = Stressor(s: TempVariables.stressor1, d: TempVariables.date)
@@ -139,19 +139,19 @@ class StressorViewController: UIViewController , UITextFieldDelegate{
         
         TempVariables.name = ""
         TempVariables.date = Date()
-        TempVariables.beforeMood = 5
+        TempVariables.beforeMood = 0
         TempVariables.expect = ""
         TempVariables.goal = ""
-        TempVariables.beginningMood = 5
+        TempVariables.beginningMood = 0
         TempVariables.beginningStressor = ""
         TempVariables.beginningGoal = ""
-        TempVariables.middleMood = 5
+        TempVariables.middleMood = 0
         TempVariables.middleStressor = ""
         TempVariables.middleGoal = ""
-        TempVariables.endMood = 5
+        TempVariables.endMood = 0
         TempVariables.endStressor = ""
         TempVariables.endGoal = ""
-        TempVariables.afterMood = 5
+        TempVariables.afterMood = 0
         TempVariables.overall = ""
         TempVariables.happy = ""
         TempVariables.upset = ""

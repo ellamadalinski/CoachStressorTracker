@@ -66,16 +66,16 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             cell.textLabel?.text = result
             var colorNum = Statics.surveyArray[indexPath.row].afterMood
             if colorNum == 1 || colorNum == 2 || colorNum == 3 {
-                cell.backgroundColor = UIColor.red
+                cell.backgroundColor = UIColor(red: 1.0, green: 0.15, blue: 0.1, alpha: 0.6)
             }
             else if colorNum == 4 || colorNum == 5 || colorNum == 6 || colorNum == 7 {
-                cell.backgroundColor = UIColor.yellow
+                cell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 0.4, alpha: 0.75)
             }
             else if colorNum == 8 || colorNum == 9 || colorNum == 10 {
-                cell.backgroundColor = UIColor.green
+                cell.backgroundColor = UIColor(red: 0.5, green: 1.0, blue: 0, alpha: 0.6)
             }
             else {
-                cell.backgroundColor = UIColor.lightGray
+                cell.backgroundColor = UIColor.white
             }
             cell.detailTextLabel!.text = Statics.surveyArray[indexPath.row].name
             return cell
