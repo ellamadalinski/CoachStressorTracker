@@ -9,13 +9,15 @@ import UIKit
 
 class SurveyViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var nextOutlet: UIButton!
     @IBOutlet weak var nameOutlet: UITextField!
     @IBOutlet weak var datePickerOutlet: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameOutlet.delegate = self
-
+        
+        nextOutlet.tintColor = UIColor.black
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

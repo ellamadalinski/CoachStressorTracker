@@ -11,6 +11,8 @@ import UIKit
 
 class AfterViewController: UIViewController , UITextFieldDelegate{
     
+    @IBOutlet weak var saveOutlet: UIButton!
+    @IBOutlet weak var nextOutlet: UIButton!
     @IBOutlet weak var moodNumberLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var overallTextField: UITextField!
@@ -27,7 +29,9 @@ class AfterViewController: UIViewController , UITextFieldDelegate{
         overallTextField.delegate = self
         happyTextField.delegate = self
         upsetTextField.delegate = self
-
+        
+        saveOutlet.tintColor = UIColor.black
+        nextOutlet.tintColor = UIColor.black
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

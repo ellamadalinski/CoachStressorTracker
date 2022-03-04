@@ -9,6 +9,7 @@ import UIKit
 
 class StressorViewController: UIViewController , UITextFieldDelegate{
     
+    @IBOutlet weak var doneOutlet: UIButton!
     @IBOutlet weak var stressor1TextField: UITextField!
     @IBOutlet weak var stressor2TextField: UITextField!
     @IBOutlet weak var stressor3TextField: UITextField!
@@ -33,6 +34,7 @@ class StressorViewController: UIViewController , UITextFieldDelegate{
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
+        doneOutlet.tintColor = UIColor.black
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

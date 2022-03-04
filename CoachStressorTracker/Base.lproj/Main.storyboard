@@ -369,6 +369,7 @@
                     <connections>
                         <outlet property="datePickerOutlet" destination="8bn-6B-I4Q" id="l1V-A4-2OX"/>
                         <outlet property="nameOutlet" destination="Xu3-Bm-kMr" id="1No-01-Ht1"/>
+                        <outlet property="nextOutlet" destination="YiE-Wd-PSw" id="LUX-t8-sJw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qst-jR-TBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -482,6 +483,8 @@
                         <outlet property="expectingTextField" destination="pRj-tJ-AWR" id="taS-I0-ivt"/>
                         <outlet property="goalTextField" destination="MDB-yh-liM" id="19C-Dv-55U"/>
                         <outlet property="moodNumberLabel" destination="PRG-p4-To9" id="c1u-zt-W2d"/>
+                        <outlet property="nextOutlet" destination="IOi-bM-UWi" id="MBw-1V-0B9"/>
+                        <outlet property="saveOutlet" destination="a9w-3x-H0r" id="7IA-ci-7Ou"/>
                         <outlet property="slider" destination="Ck7-0r-tFY" id="dXr-Bm-vZ5"/>
                         <segue destination="akI-i5-c1Q" kind="unwind" identifier="saveForLater" unwindAction="unwind:" id="qq2-bn-7o3"/>
                     </connections>
@@ -589,6 +592,8 @@
                     <connections>
                         <outlet property="goalTextField" destination="hvl-JY-I0D" id="9Tb-CZ-FPd"/>
                         <outlet property="moodNumberLabel" destination="mjE-pW-g9E" id="ZVK-r6-Lkq"/>
+                        <outlet property="nextOutlet" destination="8Cl-Tj-d87" id="Rho-OA-QiV"/>
+                        <outlet property="saveOutlet" destination="MEl-68-tk4" id="cSp-TG-Xxo"/>
                         <outlet property="slider" destination="FLM-uz-ZP4" id="Wlp-jj-NC8"/>
                         <outlet property="stressorTextField" destination="dVe-mc-Z6D" id="zLq-0f-irf"/>
                         <segue destination="4ua-wb-368" kind="unwind" identifier="saveForLater" unwindAction="unwind:" id="NPS-5L-Pew"/>
@@ -709,7 +714,9 @@
                     <connections>
                         <outlet property="happyTextField" destination="3Xm-vT-O9J" id="Zr9-Ig-zfq"/>
                         <outlet property="moodNumberLabel" destination="uit-yg-6hH" id="Nd8-Ow-rlI"/>
+                        <outlet property="nextOutlet" destination="EVB-kA-qEk" id="meN-U9-eUu"/>
                         <outlet property="overallTextField" destination="IyI-rF-Zxr" id="6di-aq-Muu"/>
+                        <outlet property="saveOutlet" destination="9ZZ-rC-EZ3" id="b2L-lu-1gd"/>
                         <outlet property="slider" destination="f60-Wo-FPj" id="btJ-4k-N6p"/>
                         <outlet property="upsetTextField" destination="CtI-1O-ntZ" id="Ka9-5D-elR"/>
                         <segue destination="MxA-3a-JIv" kind="unwind" identifier="saveForLater" unwindAction="unwind:" id="g5g-bE-Z9g"/>
@@ -822,6 +829,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="alleviateTextField" destination="ZOc-Ok-8K3" id="EY0-Xo-l5R"/>
+                        <outlet property="doneOutlet" destination="ocl-0b-c0B" id="tFq-9u-aDp"/>
                         <outlet property="mostStressedTextField" destination="14L-Hz-tnD" id="dyl-Fz-b2k"/>
                         <outlet property="stressor1TextField" destination="iUL-YZ-7fM" id="ZY5-Nf-NyC"/>
                         <outlet property="stressor2TextField" destination="Ysa-7j-jgz" id="m7B-Qd-NEB"/>
@@ -973,6 +981,8 @@
                     <connections>
                         <outlet property="goalTextField" destination="osG-qF-CQd" id="e7h-NL-tRj"/>
                         <outlet property="moodNumberLabel" destination="FPM-F2-CxF" id="3st-Rh-lcg"/>
+                        <outlet property="nextOutlet" destination="JUM-bx-DZ0" id="eVj-nQ-E63"/>
+                        <outlet property="saveOutlet" destination="0h3-cu-oyf" id="DOg-9c-FOX"/>
                         <outlet property="slider" destination="hbK-Eu-vGg" id="MqC-9N-En1"/>
                         <outlet property="stressorTextField" destination="cBY-Y6-axr" id="e6W-Za-08N"/>
                         <segue destination="onQ-Q2-jYf" kind="unwind" identifier="saveForLater" unwindAction="unwind:" id="fUc-Er-IdU"/>
@@ -1081,6 +1091,8 @@
                     <connections>
                         <outlet property="goalTextField" destination="zFw-EQ-HP4" id="CPd-e9-MY5"/>
                         <outlet property="moodNumberLabel" destination="WxK-Zp-CMu" id="kQm-p2-Uvt"/>
+                        <outlet property="nextOutlet" destination="2Ng-Ul-35d" id="XKD-Vh-9so"/>
+                        <outlet property="saveOutlet" destination="lX4-mW-eJh" id="rFU-1V-cFl"/>
                         <outlet property="slider" destination="A8M-fo-PoS" id="cmy-dS-nuJ"/>
                         <outlet property="stressorTextField" destination="RTV-RI-TxE" id="MxE-hG-jxr"/>
                         <segue destination="sOB-fc-yMw" kind="unwind" identifier="saveForLater" unwindAction="unwind:" id="4dx-GE-eur"/>

@@ -9,6 +9,8 @@ import UIKit
 
 class MiddleViewController: UIViewController , UITextFieldDelegate{
 
+    @IBOutlet weak var saveOutlet: UIButton!
+    @IBOutlet weak var nextOutlet: UIButton!
     @IBOutlet weak var moodNumberLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var stressorTextField: UITextField!
@@ -24,6 +26,8 @@ class MiddleViewController: UIViewController , UITextFieldDelegate{
         stressorTextField.delegate = self
         goalTextField.delegate = self
         
+        saveOutlet.tintColor = UIColor.black
+        nextOutlet.tintColor = UIColor.black
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

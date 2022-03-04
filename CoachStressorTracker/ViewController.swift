@@ -155,6 +155,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                 self.tabBarController?.selectedIndex = 1
                 
                 Statics.surveyArray.remove(at: indexPath.row)
+                
+                
                 tableView.reloadData()
                 
             }

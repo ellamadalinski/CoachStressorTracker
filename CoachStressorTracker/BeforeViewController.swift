@@ -10,6 +10,8 @@ import UIKit
 class BeforeViewController: UIViewController , UITextFieldDelegate{
     
 
+    @IBOutlet weak var saveOutlet: UIButton!
+    @IBOutlet weak var nextOutlet: UIButton!
     @IBOutlet weak var moodNumberLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var expectingTextField: UITextField!
@@ -27,6 +29,8 @@ class BeforeViewController: UIViewController , UITextFieldDelegate{
         goalTextField.delegate = self
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
+        saveOutlet.tintColor = UIColor.black
+        nextOutlet.tintColor = UIColor.black
         
     }
     
